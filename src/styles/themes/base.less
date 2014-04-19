@@ -1,0 +1,80 @@
+@import "../variables";
+
+// Code highlighter
+@import "../prism";
+
+// Colors
+@PageBackground: @grayLighter;
+@PageColor: @black;
+
+@SlideBackground: @white;
+@SlideColor: @grayDarker;
+
+// Base
+body {
+  font-family: 'Ubuntu', 'Droid Sans', sans-serif;
+  background-color: @PageBackground;
+  color: @PageColor;
+}
+
+blockquote {
+  border-left: .1em groove @grayLighter;
+  padding-left: .25em;
+  margin: .25em;
+  footer {
+    font-size: .8em;
+    font-style: italic;
+  }
+}
+
+.block() {
+  background-color: @SlideBackground;
+  color: @SlideColor;
+  margin: 1em;
+  padding: .5em;
+  .border-radius();
+}
+
+// Slide
+
+@transitionDuration: 0.3s;
+.slide {
+  .block();
+  .transition(@transitionDuration ease-in-out);
+
+  &.previous {
+    .translate(-100%, 0);
+  }
+  &.next {
+    .translate(100%, 0);
+  }
+
+}
+
+.slide h3 {
+  border-bottom: .05em solid @grayLight;
+}
+
+// Step
+.step {
+  &.done, &.current {
+    .transition(@transitionDuration ease-in-out);
+  }
+}
+
+// Pages
+#pages {
+  opacity: 0.8;
+  display: inline-block;
+  background-color: @SlideColor;
+  color: @SlideBackground;
+  .border-radius();
+  padding: .1em .3em;
+  .text-shadow(.03em .03em .1em @white);
+}
+
+// Presenter
+.presenter {
+  background-color: @blue;
+}
+
