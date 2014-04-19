@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <title>{{title}}</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic|Ubuntu:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <link href="styles/main.css" rel="stylesheet" media="screen"/>
+    <link href="styles/print.css" rel="stylesheet" media="print"/>
+</head>
+<body>
+<div id="pages"></div>
+<div id="clock">
+    <div class="now"></div>
+    <div class="time"></div>
+</div>
+
+<header id="title" class="slide">
+    <h1>
+        {{title}}<br>
+        <small>{{subtitle}}</small>
+    </h1>
+
+    <p class="attribution">By {{author}}</p>
+</header>
+
+<!--(bake partials/intro.html)-->
+<!--(bake partials/section1.html)-->
+<!--(bake partials/section2.html)-->
+
+<footer class="slide">
+    <h2>Thank you!</h2>
+
+    <p>Closing remarks</p>
+</footer>
+<!-- Scripts -->
+<script src="scripts/zepto.min.js"></script>
+<script src="scripts/moment.min.js"></script>
+<script src="scripts/prism.min.js"></script>
+<script src="scripts/prez.js"></script>
+</body>
+</html>

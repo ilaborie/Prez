@@ -1,0 +1,237 @@
+// Base
+* {
+  padding: 0;
+  margin: 0;
+  .user-select(none);
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+pre, code, span.token {
+  .user-select(text);
+}
+
+// Responsive Font size
+@media screen and (max-width: 799px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 800px)  and (max-width: 1023px) {
+  body {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  body {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 1279px) {
+  body {
+    font-size: 40px;
+  }
+}
+
+// Slide
+.slide {
+  opacity: 0;
+  z-index: 1;
+
+  position: fixed;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+
+  &.current {
+    opacity: 1;
+  }
+
+  .note {
+    display: none;
+  }
+
+  p {
+    font-size: 1.1em;
+    margin-left: 1em;
+  }
+
+  ul {
+    margin-left: 1em;
+  }
+  ol {
+    margin-left: 1.5em;
+  }
+  ul, ol {
+    font-size: 1.4em;
+
+    ul, ol {
+      font-size: .8em;
+    }
+  }
+  dl {
+    dt {
+      font-weight: bold;
+    }
+    dd {
+      font-size: .9em;
+      margin-bottom: .25em;
+    }
+  }
+  div.img-holder {
+    text-align: center;
+    img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+  }
+}
+
+// Presenter Mode
+.presenter {
+  font-size: 1em;
+
+  section > header.slide > h2 {
+    padding: 2em;
+    position: inherit;
+    left: auto;
+    right: auto;
+    top: auto;
+    text-align: center;
+    font-size: 2.5em;
+  }
+
+  .slide {
+    top: 0;
+    bottom: 25%;
+    left: 0;
+    right: 25%;
+
+    &.previous, &.next {
+      .noTransform();
+      opacity: 1;
+      position: fixed;
+      font-size: .25em;
+      margin: 0;
+      margin-right: 1em;
+    }
+    &.previous {
+      top: 10%;
+      bottom: 65%;
+      left: 75%;
+      right: 0%;
+    }
+    &.next {
+      margin-top: 1em;
+      top: 45%;
+      bottom: 30%;
+      left: 75%;
+      right: 0%;
+    }
+    &.current {
+      .note {
+        display: block;
+        position: fixed;
+        top: 75%;
+        bottom: 0;
+        left: 0;
+        right: 25%;
+        font-size: 1em;
+        .block();
+        margin-top: 0;
+      }
+    }
+  }
+  // Timer
+  #clock {
+    display: block;
+    margin-top: 0;
+    margin-left: 0;
+
+    .time, .now {
+      .block();
+      text-align: center;
+      background-color: @SlideColor;
+      color: @SlideBackground;
+      font-weight: bold;
+    }
+    .time:before {
+      content: "Enlapsed: ";
+    }
+    .now:before {
+      content: "Time: ";
+    }
+  }
+}
+
+// Step items that are shown incrementally after the slide is
+.step {
+  opacity: 0;
+
+  &.done {
+    opacity: 0.75;
+  }
+  &.current {
+    opacity: 1;
+  }
+}
+
+// Hide pages information by default
+#pages {
+  display: none; // Use inline-block to display
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  margin: 1em;
+  font-size: 0.75em;
+}
+
+// Hide clock by default
+#clock {
+  display: none; // Use inline-block to display
+  position: fixed;
+  top: 75%;
+  bottom: 0;
+  left: 75%;
+  right: 0;
+}
+
+// Headers
+body > header.slide {
+  font-size: 1.5em;
+  text-align: center;
+  vertical-align: middle;
+
+  h1 small {
+    font-size: .5em;
+  }
+
+  .attribution {
+    position: absolute;
+    bottom: 0;
+    font-size: .8em;
+  }
+}
+
+section > header.slide > h2 {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin-top: -.6em;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.slide > h3 {
+  font-size: 2em;
+  margin-bottom: .5em;
+}
