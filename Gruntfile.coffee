@@ -1,11 +1,12 @@
 module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-contrib"
   grunt.loadNpmTasks "grunt-bake"
+  grunt.loadNpmTasks "grunt-bower-task"
 
   # Specifics tasks
   grunt.registerTask "html", ["bake:html", "copy:img", "copy:code"]
   grunt.registerTask "style", ["copy:css", "less"]
-  grunt.registerTask "script", ["copy:js", "copy:coffee", "coffee"]
+  grunt.registerTask "script", ["bower:install", "copy:coffee", "coffee"]
 
   # General tasks
   grunt.registerTask "build", ["html", "style", "script"]
@@ -117,3 +118,11 @@ module.exports = (grunt) ->
           content: "package.json"
         files:
           "target/index.html": "#{input}/index.html"
+
+
+  # Bower
+    bower:
+      install:
+        options:
+          targetDir: scriptOutput
+

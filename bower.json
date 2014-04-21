@@ -1,0 +1,26 @@
+{
+    "name": "Prez",
+    "version": "0.0.0",
+    "homepage": "https://github.com/ilaborie/Prez",
+    "authors": [
+        "Igor Laborie <ilaborie@gmail.com>"
+    ],
+    "description": "A basic HTML/CSS CoffeeScript SlideShow",
+    "main": "target/scripts/prez.js",
+    "keywords": [
+        "SlideShow"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "moment": "~2.6.0",
+        "prism": "gh-pages",
+        "zepto": "~1.1.3"
+    }
+}

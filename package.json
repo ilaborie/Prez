@@ -1,8 +1,8 @@
 {
     "name": "prez",
-    "description": "A basic HTML/CSS CoffeeScript Presentation",
+    "description": "A basic HTML/CSS CoffeeScript SlideShow",
     "title": "Prez",
-    "subtitle": "A basic HTML/CSS CoffeeScript Presentation",
+    "subtitle": "A basic HTML/CSS CoffeeScript SlideShow",
     "version": "0.0.0",
     "author": "Igor Laborie",
     "scripts": {
@@ -37,6 +37,7 @@
         "grunt-contrib-imagemin": "^0.6.1",
         "grunt-contrib-yuidoc": "^0.5.2",
         "grunt-contrib": "^0.10.2",
-        "grunt-bake": "^0.3.10"
+        "grunt-bake": "^0.3.10",
+        "grunt-bower-task": "^0.3.4"
     }
 }
