@@ -1,0 +1,77 @@
+<section>
+    <header class="slide">
+        <h2>Usage</h2>
+    </header>
+
+
+    <article class="slide">
+        <h3>Learn to use</h3>
+        <ul>
+            <li>Inspect this page</li>
+            <li>see code in <a href="https://github.com/ilaborie/prez">Github</a></li>
+        </ul>
+    </article>
+
+    <article class="slide">
+        <h3>Build a slideshow</h3>
+        <h4>Requirements <small>(do once)</small></h4>
+        <ol>
+            <li>
+                If necessary, install <a href="http://nodejs.org/">Node</a>,
+                <a href="http://gruntjs.com/">Grunt</a>,
+                <a href="http://bower.io/">Bower</a>
+
+            </li>
+            <li><code>git clone</code> the project</li>
+            <li>run <code>npm install</code> to load build dependencies</li>
+        </ol>
+        <br>
+        <h4>Daily build</h4>
+        <ol>
+            <li>run <code>grunt</code> build the presentation</li>
+            <li>run <code>grunt dev</code> to develop the presentation</li>
+        </ol>
+    </article>
+
+    <article class="slide">
+        <h3>Style your slides</h3>
+
+        <p>
+            Prez use <a href="http://lesscss.org/">Less</a> to create CSS files.
+            Just update less file to change the slideshow style.
+        </p>
+        <dl>
+            <dt>main.less</dt>
+            <dd>Assemble others less files, include</dd>
+
+            <dt>theme/*.less</dt>
+            <dd>Some themes, create yours here and include it into main.less</dd>
+
+            <dt>prez.less</dt>
+            <dd>Standard presentation style and behaviour</dd>
+
+            <dt>print.less</dt>
+            <dd>Create a specific css for printer</dd>
+
+            <dt>prism.less</dt>
+            <dd>Style your <code>&lt;code&gt;</code> block</dd>
+
+            <dt>talk.less</dt>
+            <dd>Custom style for your current slideshow</dd>
+
+            <dt>variable.less</dt>
+            <dd>Some variables and useful mixins</dd>
+        </dl>
+    </article>
+
+    <article class="slide">
+        <h3>Use without building process</h3>
+        <ul>
+            <li>Run <code>grunt</code></li>
+            <li>Get <em>target/script/prez.js</em></li>
+            <li>Include this script into you HTML file</li>
+            <li>Use a generated CSS file or create yours</li>
+        </ul>
+    </article>
+
+</section>

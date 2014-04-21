@@ -17,25 +17,25 @@ pre, code, span.token {
 // Responsive Font size
 @media screen and (max-width: 799px) {
   body {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
 @media screen and (min-width: 800px)  and (max-width: 1023px) {
   body {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
   body {
-    font-size: 32px;
+    font-size: 28px;
   }
 }
 
 @media screen and (min-width: 1279px) {
   body {
-    font-size: 40px;
+    font-size: 36px;
   }
 }
 
@@ -58,13 +58,15 @@ pre, code, span.token {
     display: none;
   }
 
-  p {
-    font-size: 1.1em;
+  p, ul, dl {
     margin-left: 1em;
   }
 
-  ul {
-    margin-left: 1em;
+  p {
+    font-size: 1.1em;
+  }
+  blockquote {
+    margin-left: 2em;
   }
   ol {
     margin-left: 1.5em;
@@ -79,6 +81,7 @@ pre, code, span.token {
   dl {
     dt {
       font-weight: bold;
+      font-size: 1.1em;
     }
     dd {
       font-size: .9em;

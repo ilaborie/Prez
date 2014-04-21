@@ -17,20 +17,31 @@ body {
   color: @PageColor;
 }
 
-blockquote {
-  border-left: .1em groove @grayLighter;
+.slide blockquote {
+  border-left: .3em solid @grayLighter;
   padding-left: .25em;
   margin: .25em;
+  margin-left: 2em;
+  font-size: 1.1em;
+
+  p {
+    margin-left: 0em;
+  }
+
   footer {
     font-size: .8em;
+    padding-left: .25em;
     font-style: italic;
+    &:before {
+      content: '\2014 \00A0';
+    }
   }
 }
 
 .block() {
   background-color: @SlideBackground;
   color: @SlideColor;
-  margin: 1em;
+  margin: .5em;
   padding: .5em;
   .border-radius();
 }

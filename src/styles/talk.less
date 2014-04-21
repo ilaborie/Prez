@@ -6,5 +6,29 @@
 }
 
 #imgPresenterMode {
-  max-height: 85%;
+  max-height: 75%;
+}
+
+.notice(@color, @bgRatio:40%) {
+  background-color: lighten(@color, @bgRatio);
+  border-left: .2em solid @color;
+  border-right: .2em solid @color;
+  .border-radius();
+  margin: .5em;
+  padding: .25em;
+}
+
+div.notice {
+  &.notice-error {
+    .notice(@red);
+  }
+  &.notice-warning {
+    .notice(@orange);
+  }
+  &.notice-info {
+    .notice(@blue);
+  }
+  &.notice-success {
+    .notice(@green);
+  }
 }
