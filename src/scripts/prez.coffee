@@ -113,7 +113,7 @@ class Prez
       $now.html now.format("HH:mm")
       diff = now.diff start
       $time.html moment(diff).format("mm:ss")
-    # TODO open and drive the
+    # Open and drive the twin
     url = document.location.toString()
     twin = window.open url, "_blank"
 
@@ -129,12 +129,15 @@ class Prez
       when 38 then @stepBack() # up
       when 39 then @stepOver() # right
       when 40 then @stepOver() # down
+      else # do nothing
+
     if (event.ctrlKey || event.shiftKey) && !event.altKey
       switch event.keyCode
         when 80 then @setPresenter() # Ctrl+P || Shift+P
+        else # do nothing
 
 ###
-  Intialization
+  Initialization
 ###
 $ () ->
   @prez = new Prez()
@@ -147,7 +150,8 @@ $ () ->
   # Get the Hash or go Home
   handleHash = () ->
     page = location.hash.substr(1) | 0
-    @prez.moveTo (page - 1)
+    index = if page is 0 then 0 else page - 1
+    @prez.moveTo index
   $(this).on "hashchange", handleHash
   handleHash()
 
