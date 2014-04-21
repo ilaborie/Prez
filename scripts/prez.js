@@ -246,6 +246,7 @@
           break;
         case 40:
           this.stepOver();
+          break;
       }
       if ((event.ctrlKey || event.shiftKey) && !event.altKey) {
         switch (event.keyCode) {
@@ -261,7 +262,7 @@
 
 
   /*
-    Intialization
+    Initialization
    */
 
   $(function() {
@@ -272,9 +273,10 @@
       return $pages.html("" + (slide.num + 1) + " / " + size);
     });
     handleHash = function() {
-      var page;
+      var index, page;
       page = location.hash.substr(1) | 0;
-      return this.prez.moveTo(page - 1);
+      index = page === 0 ? 0 : page - 1;
+      return this.prez.moveTo(index);
     };
     $(this).on("hashchange", handleHash);
     return handleHash();

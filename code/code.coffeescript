@@ -1,0 +1,12 @@
+class Prez
+    $allSlides = 0
+    constructor: () -> $allSlides = $ ".slide"
+    moveTo (index, reverse) () -> # Lot's of stuff here
+    home: () =>
+        $allSlides.removeClass "previous current next"
+        @moveTo 0
+    prev: () => @moveTo (position - 1), true
+    next: () => @moveTo (position + 1)
+    last: () =>
+        $allSlides.removeClass "previous current next"
+        @moveTo (slides.length - 1)

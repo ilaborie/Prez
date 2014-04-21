@@ -20,7 +20,7 @@
 <header id="title" class="slide">
     <h1>
         Prez<br>
-        <small>A basic HTML/CSS CoffeeScript Presentation</small>
+        <small>A basic HTML/CSS CoffeeScript SlideShow</small>
     </h1>
 
     <p class="attribution">By Igor Laborie</p>
@@ -28,80 +28,104 @@
 
 <section>
     <header class="slide">
-        <h2>Section title</h2>
+        <h2>Introduce <em>Prez</em></h2>
     </header>
 
     <article class="slide">
-        <h3>Slide title</h3>
+        <h3><code>$ whoami</code></h3>
 
-        <p>Slide content</p>
+        <address>
+            <strong>Igor Laborie</strong><br>
+            <a href="https://github.com/ilaborie/">https://github.com/ilaborie/</a><br>
+            <a href="https://twitter.com/intent/user?screen_name=ilaborie">Follow my Twitter account: @ilaborie</a>
+        </address>
+    </article>
 
-        <p class="note">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ipsam itaque nesciunt quod voluptate!
-            Commodi, debitis dignissimos doloremque dolorum facilis, fuga minus nobis quasi, repellendus sed sunt suscipit
-            tempora unde!
+    <article class="slide">
+        <h3><code>What's Prez</code></h3>
+        <p>
+            <strong>Prez</strong> is just a basic HTML slideshow system
         </p>
+    </article>
+
+    <article class="slide">
+        <h3><code>Why Prez ?</code></h3>
+        <p>I've just want to create my own slideshow system</p>
+        <blockquote>
+            <p>
+                Why create another HTML5 slideshow system?<br>
+                Just for fun!
+            </p>
+            <footer>Igor</footer>
+        </blockquote>
+        <p>=> Others slideshows system are probably better than mine...</p>
     </article>
 </section>
 
 <section>
     <header class="slide">
-        <h2>Basic HTML elements</h2>
+        <h2>Basic HTML</h2>
     </header>
 
-    <section class="slide">
+
+    <article class="slide">
+        <h3>This is just HTML5 with CSS3</h3>
+
+        <p>This slide is just written like that:</p>
+        <pre data-src="code/thisIsJustHTML.html"></pre>
+    </article>
+
+    <article class="slide">
         <h3>Basic paragraph</h3>
 
-        <p>Lorem ipsum dolor sit amet, <em>emphasis</em> adipisicing elit. Atque <sub>sub</sub> deleniti
+        <p>
+            Lorem ipsum dolor sit amet, <em>emphasis</em> adipisicing elit. Atque <sub>sub</sub> deleniti
             dignissimos ea expedita
             <strong>strong</strong> incidunt labore laudantium
             <small>small</small>
             porro quam quisquam quod rem <sup>sup</sup> rerum veniam, voluptatibus.
             Earum, illo?
         </p>
+        <pre data-src="code/paragraph.html"></pre>
+    </article>
 
-    </section>
-
-    <section class="slide">
-        <h3>Other typo</h3>
-
-        <p>
-            <abbr title="attribute">abbr</abbr>
-        </p>
-
+    <article class="slide">
+        <h3>Address</h3>
         <address>
             <strong>Full Name</strong><br>
             <a href="mailto:#">first.last@example.com</a>
         </address>
+        <pre data-src="code/address.html"></pre>
+    </article>
 
+    <article class="slide">
+        <h3>Blockquote</h3>
         <blockquote>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
             <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
         </blockquote>
-    </section>
+        <pre data-src="code/blockquote.html"></pre>
+    </article>
 
-    <section class="slide">
-        <h3>Lists 1/3</h3>
+    <article class="slide">
+        <h3>Bullet list</h3>
         <ul>
             <li>Lorem ipsum dolor sit amet</li>
-            <li>Consectetur adipiscing elit</li>
-            <li>Integer molestie lorem at massa</li>
             <li>
                 Facilisis in pretium nisl aliquet
                 <ul>
                     <li>Lorem ipsum dolor sit amet</li>
-                    <li>Consectetur adipiscing elit</li>
                     <li>Integer molestie lorem at massa</li>
                 </ul>
             </li>
         </ul>
-    </section>
+        <pre data-src="code/ul.html"></pre>
+    </article>
 
-    <section class="slide">
-        <h3>Lists 2/3</h3>
+    <article class="slide">
+        <h3>Ordered List</h3>
         <ol>
             <li>Lorem ipsum dolor sit amet</li>
-            <li>Consectetur adipiscing elit</li>
             <li>
                 Integer molestie lorem at massa
                 <ol>
@@ -109,33 +133,34 @@
                     <li>Consectetur adipiscing elit</li>
                 </ol>
             </li>
-            <li>Facilisis in pretium nisl aliquet</li>
         </ol>
-    </section>
+        <pre data-src="code/ol.html"></pre>
+    </article>
 
-    <section class="slide">
-        <h3>Lists 3/3</h3> <dl>
-        <dt>Description lists</dt>
-        <dd>A description list is perfect for defining terms.</dd>
-        <dt>Euismod</dt>
-        <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
-        <dd>Donec id elit non mi porta gravida at eget metus.</dd>
-        <dt>Malesuada porta</dt>
-        <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
-    </dl>
-    </section>
+    <article class="slide">
+        <h3>Definitions list</h3>
+        <dl>
+            <dt>Description lists</dt>
+            <dd>A description list is perfect for defining terms.</dd>
+
+            <dt>Euismod</dt>
+            <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+            <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+        </dl>
+        <pre data-src="code/dl.html"></pre>
+    </article>
 
 </section>
 
 <section>
     <header class="slide">
-        <h2>Specifics component</h2>
+        <h2>Specifics components</h2>
     </header>
 
-
     <section class="slide">
-        <h3>Section, header, article</h3>
-        <pre class="line-numbers" data-src="code/section.html"></pre>
+        <h3>Basic</h3>
+        <p>The basic structure is like this:</p>
+        <pre data-src="code/slides.html"></pre>
     </section>
 
     <section class="slide">
@@ -158,6 +183,9 @@
     <section class="slide">
         <h3>Presenter mode</h3>
         <p>Hit <code>Ctrl+P</code> or <code>Shift+P</code> to enter presenter mode.</p>
+        <div class="notice notice-warning">
+            <p>You should deal with the popup blocker.</p>
+        </div>
         <div id="imgPresenterMode" class="img-holder">
             <img src="images/presenter_mode.png" alt="Presenter mode"/>
         </div>
@@ -165,16 +193,96 @@
     </section>
 </section>
 
+<section>
+    <header class="slide">
+        <h2>Usage</h2>
+    </header>
+
+
+    <article class="slide">
+        <h3>Learn to use</h3>
+        <ul>
+            <li>Inspect this page</li>
+            <li>see code in <a href="https://github.com/ilaborie/prez">Github</a></li>
+        </ul>
+    </article>
+
+    <article class="slide">
+        <h3>Build a slideshow</h3>
+        <h4>Requirements <small>(do once)</small></h4>
+        <ol>
+            <li>
+                If necessary, install <a href="http://nodejs.org/">Node</a>,
+                <a href="http://gruntjs.com/">Grunt</a>,
+                <a href="http://bower.io/">Bower</a>
+
+            </li>
+            <li><code>git clone</code> the project</li>
+            <li>run <code>npm install</code> to load build dependencies</li>
+        </ol>
+        <br>
+        <h4>Daily build</h4>
+        <ol>
+            <li>run <code>grunt</code> build the presentation</li>
+            <li>run <code>grunt dev</code> to develop the presentation</li>
+        </ol>
+    </article>
+
+    <article class="slide">
+        <h3>Style your slides</h3>
+
+        <p>
+            Prez use <a href="http://lesscss.org/">Less</a> to create CSS files.
+            Just update less file to change the slideshow style.
+        </p>
+        <dl>
+            <dt>main.less</dt>
+            <dd>Assemble others less files, include</dd>
+
+            <dt>theme/*.less</dt>
+            <dd>Some themes, create yours here and include it into main.less</dd>
+
+            <dt>prez.less</dt>
+            <dd>Standard presentation style and behaviour</dd>
+
+            <dt>print.less</dt>
+            <dd>Create a specific css for printer</dd>
+
+            <dt>prism.less</dt>
+            <dd>Style your <code>&lt;code&gt;</code> block</dd>
+
+            <dt>talk.less</dt>
+            <dd>Custom style for your current slideshow</dd>
+
+            <dt>variable.less</dt>
+            <dd>Some variables and useful mixins</dd>
+        </dl>
+    </article>
+
+    <article class="slide">
+        <h3>Use without building process</h3>
+        <ul>
+            <li>Run <code>grunt</code></li>
+            <li>Get <em>target/script/prez.js</em></li>
+            <li>Include this script into you HTML file</li>
+            <li>Use a generated CSS file or create yours</li>
+        </ul>
+    </article>
+
+</section>
+
 
 <footer class="slide">
-    <h2>Thank you!</h2>
-
-    <p>Closing remarks</p>
+    <h2>More</h2>
+    <p>
+        Fork &amp; Hack, report issue, suggestion, ... on github:
+        <a href="https://github.com/ilaborie/prez">https://github.com/ilaborie/prez</a>
+    </p>
 </footer>
 <!-- Scripts -->
-<script src="scripts/zepto.min.js"></script>
-<script src="scripts/moment.min.js"></script>
-<script src="scripts/prism.min.js"></script>
+<script src="scripts/zepto/zepto.js"></script>
+<script src="scripts/moment/moment.js"></script>
+<script src="scripts/prism/prism.js"></script>
 <script src="scripts/prez.js"></script>
 </body>
 </html>
