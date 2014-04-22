@@ -2,7 +2,6 @@
 * {
   padding: 0;
   margin: 0;
-  .user-select(none);
 }
 
 html, body {
@@ -10,9 +9,6 @@ html, body {
   overflow: hidden;
 }
 
-pre, code, span.token {
-  .user-select(text);
-}
 
 // Responsive Font size
 @media screen and (max-width: 799px) {
@@ -41,17 +37,17 @@ pre, code, span.token {
 
 // Slide
 .slide {
-  opacity: 0;
+  display: none;
   z-index: 1;
 
   position: fixed;
-  top: 0%;
-  bottom: 0%;
-  left: 0%;
-  right: 0%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
   &.current {
-    opacity: 1;
+    display: block;
   }
 
   .note {

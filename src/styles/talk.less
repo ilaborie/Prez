@@ -9,7 +9,7 @@
   max-height: 75%;
 }
 
-.notice(@color, @bgRatio:40%) {
+.notice(@color, @bgRatio:50%) {
   background-color: lighten(@color, @bgRatio);
   border-left: .2em solid @color;
   border-right: .2em solid @color;
@@ -20,10 +20,10 @@
 
 div.notice {
   &.notice-error {
-    .notice(@red);
+    .notice(@red,60%);
   }
   &.notice-warning {
-    .notice(@orange);
+    .notice(@orange, 40%);
   }
   &.notice-info {
     .notice(@blue);

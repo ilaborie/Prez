@@ -4,7 +4,7 @@
 @CodeColor: @black;
 @CodeBackground: #f5f2f0;
 @CodeBackgroundSelected: #b3d4fc;
-@BorderCode: darken(@CodeBackground, 10%);
+@BorderCode: darken(@CodeBackground, 30%);
 
 @tokenCDATA:slategray;
 @tokenPunctuation:#999;
@@ -59,6 +59,7 @@ pre[class*="language-"] {
   padding: .5em;
   margin: .5em 0;
   overflow: auto;
+  border: thin solid @BorderCode;
   .box-shadow(.3em .3em .2em 0px fadein(@BorderCode, 0.75));
 }
 
