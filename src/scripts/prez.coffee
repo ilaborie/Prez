@@ -61,6 +61,20 @@ class Prez
     for slide, i in $allSlides
       slides.push new Slide(i, slide)
     $doc.on "keydown", @handleKeyDown
+    # Touch events
+    Hammer(document).on "tap", () =>
+      @stepOver()
+    Hammer(document).on "doubletap", () =>
+      @stepBack()
+    # Swipe events
+    Hammer(document).on "swipeup", () =>
+      @home()
+    Hammer(document).on "swipeleft", () =>
+      @next()
+    Hammer(document).on "swiperight", () =>
+      @prev()
+    Hammer(document).on "swipedown", () =>
+      @last()
 
   # Move to a specific slide
   moveTo: (index, reverse) =>
