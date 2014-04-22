@@ -1,0 +1,149 @@
+@import "../variables";
+// Code highlighter
+@import "../prism";
+
+// Colors
+@PageColor: @black;
+
+@SlideBackground: rgba(255, 255, 255, 0.5);
+@SlideColor: #333;
+
+@TitleBlue: #374B5E;
+@TitleRed: #CE2227;
+@LightBlue: #E7ECF2;
+@Yellow: #FFDE86;
+@Orange: #F7D4A2;
+
+@BackgroundGray: #e8e8e8;
+
+@smallWhiteShadow: .03em .03em .1em @white;
+@mediumShadow: .1em .1em .1em @LightBlue;
+
+// Base
+body {
+  font-family: 'Ubuntu', 'Droid Sans', sans-serif;
+  background-image: url("/images/background.jpg");
+  background-size: 100%;
+  color: @PageColor;
+}
+
+.slide blockquote {
+  border-left: .3em solid darken(@LightBlue, 5%);
+  .hgradient(@LightBlue, transparent);
+
+  padding-left: .25em;
+  margin: .25em;
+  margin-left: 2em;
+  font-size: 1.1em;
+
+  p {
+    margin-left: 0em;
+  }
+
+  footer {
+    color: @TitleRed;
+    font-size: .8em;
+    padding-left: .25em;
+    font-style: italic;
+    &:before {
+      content: '\2014 \00A0';
+    }
+  }
+}
+
+.block() {
+  background-color: @SlideBackground;
+  color: @SlideColor;
+  margin: .5em;
+  padding: .5em;
+  .border-radius();
+}
+
+// Slide
+
+@transitionDuration: 0.3s;
+section > header.slide {
+  background-color: fade(@TitleBlue, 25%);
+  h2 {
+    .text-shadow(@smallWhiteShadow)
+  }
+}
+
+.slide {
+  background-color: transparent;
+  .block();
+  .transition(@transitionDuration ease-in-out);
+  h3 {
+    color: @TitleBlue;
+    .text-shadow(@smallWhiteShadow)
+  }
+  code {
+    color: @TitleRed;
+    background-color: @LightBlue;
+    .border-radius(0.4em);
+    padding: 0 .2em;
+
+    &[class*="language-"] {
+      background-color: transparent;
+      color: @black;
+    }
+  }
+  p {
+    em, strong {
+      .text-shadow(@mediumShadow)
+    }
+  }
+
+  dl dt, address strong {
+    color: @TitleBlue;
+    .text-shadow(@smallWhiteShadow)
+  }
+
+  a {
+    color: #CE2227;
+  }
+
+  &.previous {
+    .translate(-100%, 0);
+  }
+  &.next {
+    .translate(100%, 0);
+  }
+}
+
+.slide h3 {
+  border-bottom: .05em solid @grayLight;
+}
+
+// Step
+.step {
+  &.done {
+    opacity: 0.66;
+  }
+  &.current {
+    opacity: 1;
+    .text-shadow(@smallWhiteShadow)
+  }
+
+  &.done, &.current {
+    .transition(@transitionDuration ease-in-out);
+  }
+}
+
+// Pages
+#pages {
+  opacity: 0.8;
+  display: inline-block;
+  background-color: @BackgroundGray;
+  color: @TitleBlue;
+  border: thin solid @TitleBlue;
+  .border-radius();
+  padding: .1em .3em;
+  .text-shadow(@smallWhiteShadow);
+}
+
+// Presenter
+.presenter {
+  background-color: @blue;
+}
+
