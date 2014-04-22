@@ -120,6 +120,36 @@
         slides.push(new Slide(i, slide));
       }
       $doc.on("keydown", this.handleKeyDown);
+      Hammer(document).on("tap", (function(_this) {
+        return function() {
+          return _this.stepOver();
+        };
+      })(this));
+      Hammer(document).on("doubletap", (function(_this) {
+        return function() {
+          return _this.stepBack();
+        };
+      })(this));
+      Hammer(document).on("swipeup", (function(_this) {
+        return function() {
+          return _this.home();
+        };
+      })(this));
+      Hammer(document).on("swipeleft", (function(_this) {
+        return function() {
+          return _this.next();
+        };
+      })(this));
+      Hammer(document).on("swiperight", (function(_this) {
+        return function() {
+          return _this.prev();
+        };
+      })(this));
+      Hammer(document).on("swipedown", (function(_this) {
+        return function() {
+          return _this.last();
+        };
+      })(this));
     }
 
     Prez.prototype.moveTo = function(index, reverse) {
